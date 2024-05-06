@@ -1,0 +1,29 @@
+import { Suspense, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Content, Switch } from "./components";
+import { Loading } from "./components/shared/loading/Loading";
+
+function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/projects");
+  }, [navigate]);
+
+  return (
+    <Suspense fallback={<Loading />}>
+      <main className="w-[100%] h-full relative ">
+        {/* <Navbar /> */}
+        <div className="absolute right-0 top-2">
+          <Switch />
+        </div>
+        <div className="w-[100%]">
+          <Content />
+        </div>
+      </main>
+    </Suspense>
+  );
+}
+
+export default App;
+
