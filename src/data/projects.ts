@@ -1,11 +1,22 @@
 import logoReact from "../assets/Icons/react-logo.svg";
 import logHTML from "../assets/Icons/html-logo.svg";
 import logoNode from "../assets/Icons/node-logo.svg";
+import logoNest from "../assets/Icons/nestjs.svg";
+import logoTailwind from "../assets/Icons/tailwindcss.svg";
+import logoTs from "../assets/Icons/typescript.svg";
 
-// pomodoro
-import pomodoro1 from "../assets/pomodora/pomodoro1.png";
-import pomodoro2 from "../assets/pomodora/pomodoro2.png";
-import pomodoro3 from "../assets/pomodora/pomodoro3.png";
+// appPomodoro
+import pomodoro1 from "../assets/pomodora/pomodoro1.webp";
+import pomodoro2 from "../assets/pomodora/pomodoro2.webp";
+import pomodoro3 from "../assets/pomodora/pomodoro3.webp";
+
+//appTask
+import task1 from "../assets/appTask/task1.webp";
+import task2 from "../assets/appTask/task2.webp";
+import task3 from "../assets/appTask/task3.webp";
+import task4 from "../assets/appTask/task4.webp";
+import task5 from "../assets/appTask/task5.webp";
+import task6 from "../assets/appTask/task6.webp";
 
 export interface IProject {
   id: number;
@@ -20,23 +31,26 @@ export const dataProjects: IProject[] = [
   {
     id: 1,
     title: "Pomodoro App",
-    description: "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
-    tecnologies: [logoReact],
+    description:
+      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
+    tecnologies: [logoReact,logoTs],
     images: [pomodoro1, pomodoro2, pomodoro3],
     state: "finalizado"
   },
   {
     id: 2,
-    title: "Pomodoro App",
-    description: "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
-    tecnologies: [logoReact, logHTML, logoNode],
-    images: [pomodoro1, pomodoro2, pomodoro3],
+    title: "AppTask",
+    description:
+      "Aplicación para la gestión de proyectos y tareas, con autenticación al inicio de sesión y graficas. Desarrollada en React TypeScript, NestJs y MySQL.",
+    tecnologies: [logoReact, logoTailwind,logoTs,logoNest],
+    images: [task1, task2, task3, task4, task5, task6],
     state: "finalizado"
   },
   {
     id: 3,
     title: "Pomodoro App",
-    description: "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
+    description:
+      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
     tecnologies: [logoNode],
     images: [pomodoro1, pomodoro2, pomodoro3],
     state: "pendiente"
@@ -44,7 +58,8 @@ export const dataProjects: IProject[] = [
   {
     id: 4,
     title: "Pomodoro App",
-    description: "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
+    description:
+      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
     tecnologies: [logHTML],
     images: [pomodoro1, pomodoro2, pomodoro3],
     state: "finalizado"

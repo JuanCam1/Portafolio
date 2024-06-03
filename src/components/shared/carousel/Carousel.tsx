@@ -21,13 +21,13 @@ const Carousel = ({ images }: CarouselProps) => {
     }
   }
   return (
-    <div onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} className=" relative w-full border rounded max-h-[376px] h-[40vh]  overflow-hidden border-gray-300">
-      <img className="w-full h-full object-cover aspect-auto" src={images[indexImage]} alt="" />
-
+    <div onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} className=" relative w-full border rounded max-h-[376px] h-[40vh] overflow-hidden border-gray-300 flex justify-center">
+      {/* <div className="bg-red-400 w-3/4 h-full"> */}
+        <img className="w-full h-full object-contain" src={images[indexImage]} alt="project" />
+      {/* </div> */}
       {
-        isMouseOver && (
+        isMouseOver && images.length > 1 && (
           <>
-
             <button onClick={() => handleClick("preview")} type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group-focus:outline-none" data-carousel-prev>
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/30  ">
                 <svg className="w-3 h-3 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">

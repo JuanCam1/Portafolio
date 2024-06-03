@@ -12,9 +12,8 @@ function App() {
 
   return (
     <Suspense fallback={<Loading />}>
-      <main className="w-[100%] h-full relative ">
-        {/* <Navbar /> */}
-        <div className="absolute right-0 top-2">
+      <main className="w-[98vw] h-full relative">
+        <div className="absolute right-5 top-2">
           <Switch />
         </div>
         <div className="w-[100%]">

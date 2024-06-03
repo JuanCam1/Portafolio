@@ -22,19 +22,18 @@ export const Project = ({ data }: ProjectProps) => {
 
       <div className="max-sm:px-0 px-4 py-2">
         <div className="w-full mb-4">
-          <h1 className="font-extrabold text-2xl pb-2 text-blue-400">
+          <h2 className="font-extrabold text-2xl pb-2 text-blue-400">
             {data.title}
-          </h1>
-          <p className="text-balance">
+          </h2>
+          <p>
             {data.description}
           </p>
           <div className="flex mt-2 gap-2">
             {
               data.tecnologies.map((tecnologie, index) => (
                 <div key={index} className="size-6 overflow-hidden transition duration-200 hover:-translate-y-1 ">
-                  <img className="w-full h-full object-contain aspect-auto" src={tecnologie} alt="react logo" />
+                  <img className="w-full h-full object-cover aspect-auto" src={tecnologie} alt="projects" />
                 </div>
-
               ))
             }
           </div>
