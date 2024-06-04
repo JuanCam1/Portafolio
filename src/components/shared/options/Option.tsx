@@ -12,7 +12,7 @@ export const Option = ({ pathname, path, text }: OptionProps) => {
         to={path}
         aria-current="page"
         className={` ${
-          pathname === `/${path}` &&
+          pathname === `${path}` &&
           "active text-black dark:text-white border-b-4 border-solid border-blue-300"
         } inline-block p-4  rounded-t-lg  `}
       >

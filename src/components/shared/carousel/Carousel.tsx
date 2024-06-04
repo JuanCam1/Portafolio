@@ -23,21 +23,22 @@ const Carousel = ({ images }: CarouselProps) => {
   return (
     <div onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} className=" relative w-full border rounded max-h-[376px] h-[40vh] overflow-hidden border-gray-300 flex justify-center">
       {/* <div className="bg-red-400 w-3/4 h-full"> */}
-        <img className="w-full h-full object-contain" src={images[indexImage]} alt="project" />
+      <img className="w-full h-full object-contain" src={images[indexImage]} alt="project" />
       {/* </div> */}
       {
-        isMouseOver && images.length > 1 && (
+        isMouseOver && (
           <>
             <button onClick={() => handleClick("preview")} type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group-focus:outline-none" data-carousel-prev>
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/30  ">
-                <svg className="w-3 h-3 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <span className="border border-gray-300 inline-flex items-center justify-center w-7 h-7 rounded-full  bg-white/40  ">
+                <svg className="w-3 h-3 text-gray-300 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
                 </svg>
               </span>
             </button>
-            <button onClick={() => handleClick("next")} type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/30  ">
-                <svg className="w-3 h-3 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+
+            <button onClick={() => handleClick("next")} type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none " data-carousel-next>
+              <span className="border border-gray-300 inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/40  ">
+                <svg className="w-3 h-3 text-gray-300 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                 </svg>
               </span>

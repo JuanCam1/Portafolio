@@ -1,22 +1,22 @@
 export const paths = [
   {
     id: 1,
-    path: "projects",
+    path: "/",
     text: "Proyectos"
   },
   {
     id: 2,
-    path: "experience",
+    path: "/experience",
     text: "Experiencia"
   },
   {
     id: 3,
-    path: "contact",
+    path: "/contact",
     text: "Contacto"
   },
   {
     id: 4,
-    path: "blog",
+    path: "/blog",
     text: "Blog"
   }
 ];
