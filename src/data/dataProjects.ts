@@ -1,6 +1,7 @@
 import logoReact from "../assets/Icons/react-logo.svg";
 import logHTML from "../assets/Icons/html-logo.svg";
-import logoNode from "../assets/Icons/node-logo.svg";
+// import logoNode from "../assets/Icons/node-logo.svg";
+import logoMysql from "../assets/Icons/mysql.svg";
 import logoNest from "../assets/Icons/nestjs.svg";
 import logoTailwind from "../assets/Icons/tailwindcss.svg";
 import logoTs from "../assets/Icons/typescript.svg";
@@ -18,6 +19,10 @@ import task4 from "../assets/appTask/task4.webp";
 import task5 from "../assets/appTask/task5.webp";
 import task6 from "../assets/appTask/task6.webp";
 
+//SearchUserGithub
+import search1 from '../assets/searchUserGithub/search1.webp'
+import search2 from '../assets/searchUserGithub/search2.webp'
+
 export interface IProject {
   id: number;
   title: string;
@@ -32,7 +37,7 @@ export const dataProjects: IProject[] = [
     id: 1,
     title: "Pomodoro App",
     description:
-      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
+      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea.",
     tecnologies: [logoReact,logoTs],
     images: [pomodoro1, pomodoro2, pomodoro3],
     state: "finalizado"
@@ -41,8 +46,8 @@ export const dataProjects: IProject[] = [
     id: 2,
     title: "AppTask",
     description:
-      "Aplicación para la gestión de proyectos y tareas, con autenticación al inicio de sesión y graficas. Desarrollada en React TypeScript, NestJs y MySQL.",
-    tecnologies: [logoReact, logoTailwind,logoTs,logoNest],
+      "Aplicación para la gestión de proyectos y tareas, con autenticación al inicio de sesión y graficas.",
+    tecnologies: [logoReact, logoTailwind,logoTs,logoNest,logoMysql],
     images: [task1, task2, task3, task4, task5, task6],
     state: "finalizado"
   },
@@ -50,16 +55,16 @@ export const dataProjects: IProject[] = [
     id: 3,
     title: "Pomodoro App",
     description:
-      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
-    tecnologies: [logoNode],
-    images: [pomodoro1, pomodoro2, pomodoro3],
-    state: "pendiente"
+      "Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",
+      tecnologies: [logoReact,logoTs],
+    images: [search1, search2],
+    state: "finalizado"
   },
   {
     id: 4,
     title: "Pomodoro App",
     description:
-      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea. Desarrollada en React Native y TypeScript.",
+      "Aplicación para la gestión y organización del tiempo que dedicamos a cada tarea.",
     tecnologies: [logHTML],
     images: [pomodoro1, pomodoro2, pomodoro3],
     state: "finalizado"

@@ -1,10 +1,10 @@
 import { useState } from "react"
+import { IoIosArrowBack,IoIosArrowForward  } from "react-icons/io";
 
 interface CarouselProps {
   images: string[]
 }
 const Carousel = ({ images }: CarouselProps) => {
-  const [isMouseOver, setIsMouseOver] = useState(false);
   const [indexImage, setIndexImage] = useState(0);
   const indexMax = images.length - 1;
   const indexMin = 0;
@@ -21,31 +21,22 @@ const Carousel = ({ images }: CarouselProps) => {
     }
   }
   return (
-    <div onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} className=" relative w-full border rounded max-h-[376px] h-[40vh] overflow-hidden border-gray-300 flex justify-center">
-      {/* <div className="bg-red-400 w-3/4 h-full"> */}
-      <img className="w-full h-full object-contain" src={images[indexImage]} alt="project" />
-      {/* </div> */}
-      {
-        isMouseOver && (
-          <>
-            <button onClick={() => handleClick("preview")} type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group-focus:outline-none" data-carousel-prev>
-              <span className="border border-gray-300 inline-flex items-center justify-center w-7 h-7 rounded-full  bg-white/40  ">
-                <svg className="w-3 h-3 text-gray-300 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
-                </svg>
-              </span>
-            </button>
+    <div className=" relative group w-full border rounded max-h-[376px] h-[40vh] overflow-hidden border-gray-300 flex justify-center">
+      <div style={{ backgroundImage: `url(${images[indexImage]})` }}
+        className='w-full h-full bg-cover bg-no-repeat duration-500 bg-gray-300 dark:bg-white/40'>
+        {/* <img className="w-full h-full object-contain" src={images[indexImage]} alt="project" /> */}
+      </div>
 
-            <button onClick={() => handleClick("next")} type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none " data-carousel-next>
-              <span className="border border-gray-300 inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/40  ">
-                <svg className="w-3 h-3 text-gray-300 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
-                </svg>
-              </span>
-            </button>
-          </>
-        )
-      }
+
+      <div onClick={() => handleClick("preview")} className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-white/40 text-white cursor-pointer border border-gray-300 '>
+        <IoIosArrowBack  size={14} fontWeight="bold" />
+      </div>
+      
+      <div  onClick={() => handleClick("next")} className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-white/40 text-white cursor-pointer border border-gray-300 '>
+        <IoIosArrowForward size={14} fontWeight="bold" />
+      </div>
+
+
     </div>
 
   )

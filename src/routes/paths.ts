@@ -11,12 +11,12 @@ export const paths = [
   },
   {
     id: 3,
-    path: "/contact",
-    text: "Contacto"
+    path: "/blogs",
+    text: "Blogs"
   },
   {
     id: 4,
-    path: "/blog",
-    text: "Blog"
+    path: "/contact",
+    text: "Contacto"
   }
 ];

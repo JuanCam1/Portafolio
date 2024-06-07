@@ -1,8 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Blog, Projects, Contact, Experience } from "./components";
+import { Projects, Contact, Experience } from "./components";
 import App from "./App.tsx";
 import "./index.css";
+import Blogs from "./components/views/Blogs.tsx";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: "blog",
-        element: <Blog />
+        path: "blogs",
+        element: <Blogs />
       }
     ]
   }

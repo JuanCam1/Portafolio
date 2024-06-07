@@ -1,5 +1,5 @@
 import logoProfile from "../../assets/images/pixelJuan.svg";
-import { IProject } from "../../data/projects";
+import { IProject } from "../../data/dataProjects";
 import Carousel from "../shared/carousel/Carousel";
 
 interface ProjectProps {
