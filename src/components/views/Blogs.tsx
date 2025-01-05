@@ -1,16 +1,16 @@
-import { dataProjects } from "../../data/dataProjects"
-import { Project } from "./Project"
+import { dataBlogs } from "../../data/dataBlogs";
+import { Blog } from "./Blog";
 
 const Blogs = () => {
   return (
-    <>
+    <div className="gap-4 grid grid-cols-2 mt-4">
       {
-        dataProjects.map(data => (
-          <Project key={data.id} data={data} />
+        dataBlogs.map((blog, index) => (
+          <Blog key={index} blog={blog} />
         ))
       }
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Blogs
+export default Blogs;
