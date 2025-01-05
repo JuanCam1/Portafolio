@@ -1,5 +1,5 @@
 import logoProfile from "../../assets/images/perfiImagen.webp";
-import { IProject } from "../../data/dataProjects";
+import type { IProject } from "../../data/dataProjects";
 import Carousel from "../shared/carousel/Carousel";
 
 interface ProjectProps {
@@ -7,9 +7,9 @@ interface ProjectProps {
 }
 export const Project = ({ data }: ProjectProps) => {
 	return (
-		<section className="flex flex-col mb-4 border-[0.2px] p-4 dark:bg-[#242930] border-gray-300 rounded-md shadow-md">
+		<section className="flex flex-col border-[0.2px] border-gray-300 dark:bg-[#242930] shadow-md mb-4 p-4 rounded-md">
 			<div className="flex gap-2 pb-2">
-				<div className="size-12 overflow-hidden rounded-full border-2 border-solid border-blue-300 dark:bg-[rgb(21,24,27)]">
+				<div className="border-2 dark:bg-[rgb(21,24,27)] border-blue-300 border-solid rounded-full overflow-hidden size-12">
 					<img
 						className="w-full h-full object-cover"
 						src={logoProfile}
@@ -17,7 +17,7 @@ export const Project = ({ data }: ProjectProps) => {
 					/>
 				</div>
 				<div className="flex flex-col">
-					<h3 className="font-bold  m-0 ">Juan ⭐</h3>
+					<h3 className="m-0 font-bold">Juan ⭐</h3>
 					<span
 						className={`capitalize  font-medium me-2 px-2.5 py-1 rounded text-[10px]  ${data.state === "pendiente" ? "bg-red-200 text-red-800   dark:bg-red-900 dark:text-red-300" : "bg-indigo-200 text-indigo-800  dark:bg-indigo-900 dark:text-indigo-300"}`}
 					>
@@ -26,20 +26,20 @@ export const Project = ({ data }: ProjectProps) => {
 				</div>
 			</div>
 
-			<div className="max-sm:px-0 px-4 py-2">
-				<div className="w-full mb-4">
-					<h2 className="font-extrabold text-2xl pb-2 text-blue-400">
+			<div className="px-4 max-sm:px-0 py-2">
+				<div className="mb-4 w-full">
+					<h2 className="pb-2 font-extrabold text-2xl text-blue-400">
 						{data.title}
 					</h2>
 					<p>{data.description}</p>
-					<div className="flex mt-2 gap-2">
-						{data.tecnologies.map((tecnologie, index) => (
+					<div className="flex gap-2 mt-2">
+						{data.tecnologies.map((tecnologie) => (
 							<div
-								key={index}
-								className="size-6 overflow-hidden transition duration-200 hover:-translate-y-1 "
+								key={tecnologie}
+								className="transition hover:-translate-y-1 duration-200 overflow-hidden size-6"
 							>
 								<img
-									className="w-full h-full object-cover aspect-auto"
+									className="w-full h-full aspect-auto object-cover"
 									src={tecnologie}
 									alt="projects"
 								/>
