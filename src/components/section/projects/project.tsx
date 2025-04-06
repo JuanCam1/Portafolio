@@ -11,7 +11,7 @@ import { Link as LinkIcon } from 'lucide-react';
 interface Props {
   state: string;
   github: string;
-  url: string;
+  url?: string;
   children: ReactNode
 }
 
@@ -35,13 +35,16 @@ export const Project: FC<Props> = ({ state, github, url, children }) => {
 
         </div>
         <div className="flex">
+          {
+            url && (
+              <Link to={url} target="_blank" className="iconsLinks">
+                <LinkIcon />
+              </Link>
+            )
+          }
           <Link to={github} target="_blank" className="iconsLinks">
             <GithubLogo />
           </Link>
-          <Link to={url} target="_blank" className="iconsLinks">
-            <LinkIcon />
-          </Link>
-
         </div>
       </div>
       {children}

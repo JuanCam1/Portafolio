@@ -11,7 +11,7 @@ const TooltipItem: FC<Props> = ({ text, children }) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <div className="h-5 iconsLinks">
+          <div className="h-5 cursor-not-allowed iconsLinks">
             {children}
           </div>
         </TooltipTrigger>
