@@ -18,6 +18,11 @@ import projectManager4 from "@/assets/images/manager-project/manager-project4.we
 import projectManager5 from "@/assets/images/manager-project/manager-project5.webp";
 import projectManager6 from "@/assets/images/manager-project/manager-project6.webp";
 
+//imagesManager
+import imagesManager1 from "@/assets/images/manager-images/manager-images1.webp";
+import imagesManager2 from "@/assets/images/manager-images/manager-images2.webp";
+import imagesManager3 from "@/assets/images/manager-images/manager-images3.webp";
+import imagesManager4 from "@/assets/images/manager-images/manager-images4.webp";
 
 //SearchUserGithub
 import search1 from "@/assets/images/searchUserGithub/search1.webp";
@@ -55,6 +60,15 @@ export const dataProjects: IProject[] = [
   },
   {
     id: 3,
+    title: "Images Manager App",
+    description:
+      "Una aplicación de escritorio que permite visualizar y editar imágenes de manera sencilla y rápida, facilitando su uso y mantenimiento.",
+    images: [imagesManager1, imagesManager2, imagesManager3, imagesManager4],
+    state: "finalizado",
+    github: "https://github.com/JuanCam1/File-Manager-Images.git",
+  },
+  {
+    id: 4,
     title: "Pomodoro App",
     description:
       "Aplicación diseñada para gestionar y organizar eficientemente el tiempo dedicado a cada tarea, ayudándote a optimizar tu productividad y mantener el control de tus actividades diarias.",
@@ -63,7 +77,7 @@ export const dataProjects: IProject[] = [
     github: "https://github.com/JuanCam1/appPomodoroReactNative.git",
   },
   {
-    id: 4,
+    id: 5,
     title: "Search User Github",
     description:
       "Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",

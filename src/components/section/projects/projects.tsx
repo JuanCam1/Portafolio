@@ -22,6 +22,7 @@ const Projects = () => {
   const project2 = dataProjects[1];
   const project3 = dataProjects[2];
   const project4 = dataProjects[3];
+  const project5 = dataProjects[4];
   return (
     <>
       <Project state={project1.state} github={project1.github} url={project1.url}>
@@ -144,6 +145,31 @@ const Projects = () => {
           </div>
           <div className="justify-center items-center w-full h-[300px]">
             <CarouselItems items={project4.images} />
+          </div>
+        </div>
+      </Project>
+
+      <Project state={project5.state} github={project5.github} url={project5.url}>
+        <div className="max-sm:px-0 py-2 w-full">
+          <div className="mb-4 w-full">
+            <TypographyH2 text={project5.title} className="pb-2 font-extrabold text-blue-400 text-2xl" />
+
+            <TypographyP className="leading-6">
+              {project5.description}
+            </TypographyP>
+
+            <ContainerFlex className="justify-start mt-4 w-full h-8">
+              <div className="h-7 iconsLinks">
+                <ReactLogo />
+              </div>
+              <div className="h-7 iconsLinks">
+                <TailwindLogo />
+              </div>
+            </ContainerFlex>
+
+          </div>
+          <div className="justify-center items-center w-full h-[300px]">
+            <CarouselItems items={project5.images} />
           </div>
         </div>
       </Project>
