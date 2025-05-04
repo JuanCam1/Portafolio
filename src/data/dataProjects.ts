@@ -23,66 +23,81 @@ import imagesManager1 from "@/assets/images/manager-images/manager-images1.webp"
 import imagesManager2 from "@/assets/images/manager-images/manager-images2.webp";
 import imagesManager3 from "@/assets/images/manager-images/manager-images3.webp";
 import imagesManager4 from "@/assets/images/manager-images/manager-images4.webp";
+import imagesManager5 from "@/assets/images/manager-images/manager-images5.webp";
+import imagesManager6 from "@/assets/images/manager-images/manager-images6.webp";
 
 //SearchUserGithub
 import search1 from "@/assets/images/searchUserGithub/search1.webp";
 import search2 from "@/assets/images/searchUserGithub/search2.webp";
 
 export interface IProject {
-  id: number;
-  title: string;
-  state: string;
-  url?: string;
-  github: string;
-  description: string;
-  images: string[];
+	id: number;
+	title: string;
+	state: string;
+	url?: string;
+	github: string;
+	description: string;
+	images: string[];
 }
 
 export const dataProjects: IProject[] = [
-  {
-    id: 1,
-    title: "SnapLink",
-    description:
-      "Acortador de enlaces: transforma y comparte tus enlaces de forma rápida, sencilla y eficiente, facilitando su uso y difusión en cualquier plataforma.",
-    images: [snapLink1, snapLink2, snapLink3, snapLink4, snapLink5],
-    state: "finalizado",
-    url: "https://snaplink-eight.vercel.app/",
-    github: "https://github.com/JuanCam1/SnapLink-Client.git",
-  },
-  {
-    id: 2,
-    title: "Project Manager App",
-    description:
-      "Una aplicación de escritorio que detecta automáticamente todos los proyectos en una carpeta específica, permitiendo visualizarlos, editar sus nombres y abrirlos fácilmente en Visual Studio Code.",
-    images: [projectManager1, projectManager2, projectManager3, projectManager4, projectManager5, projectManager6],
-    state: "finalizado",
-    github: "https://github.com/JuanCam1/File-Manager-Projects.git",
-  },
-  {
-    id: 3,
-    title: "Images Manager App",
-    description:
-      "Una aplicación de escritorio que permite visualizar y editar imágenes de manera sencilla y rápida, facilitando su uso y mantenimiento.",
-    images: [imagesManager1, imagesManager2, imagesManager3, imagesManager4],
-    state: "finalizado",
-    github: "https://github.com/JuanCam1/File-Manager-Images.git",
-  },
-  {
-    id: 4,
-    title: "Pomodoro App",
-    description:
-      "Aplicación diseñada para gestionar y organizar eficientemente el tiempo dedicado a cada tarea, ayudándote a optimizar tu productividad y mantener el control de tus actividades diarias.",
-    images: [pomodoro1, pomodoro2, pomodoro3],
-    state: "finalizado",
-    github: "https://github.com/JuanCam1/appPomodoroReactNative.git",
-  },
-  {
-    id: 5,
-    title: "Search User Github",
-    description:
-      "Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",
-    images: [search1, search2],
-    state: "finalizado",
-    github: "https://github.com/JuanCam1/SnapLink-Client.git",
-  },
+	{
+		id: 1,
+		title: "CodeLaunch",
+		description:
+			"Una aplicación de escritorio que detecta automáticamente todos los proyectos en una carpeta específica, permitiendo visualizarlos, editar sus nombres y abrirlos fácilmente en Visual Studio Code y en la terminal.",
+		images: [
+			projectManager1,
+			projectManager2,
+			projectManager3,
+			projectManager4,
+			projectManager5,
+			projectManager6,
+		],
+		state: "finalizado",
+		github: "https://github.com/JuanCam1/File-Manager-Projects.git",
+	},
+	{
+		id: 2,
+		title: "ImagesDeck",
+		description:
+			"Aplicación de escritorio que permite visualizar,editar y eliminar imágenes de manera sencilla y rápida.",
+		images: [
+			imagesManager1,
+			imagesManager2,
+			imagesManager3,
+			imagesManager4,
+			imagesManager5,
+			imagesManager6,
+		],
+		state: "finalizado",
+		github: "https://github.com/JuanCam1/File-Manager-Images.git",
+	},
+	{
+		id: 3,
+		title: "SnapLink",
+		description:
+			"Acortador de enlaces: transforma y comparte tus enlaces de forma rápida, sencilla y eficiente, facilitando su uso y difusión en cualquier plataforma.",
+		images: [snapLink1, snapLink2, snapLink3, snapLink4, snapLink5],
+		state: "finalizado",
+		github: "https://github.com/JuanCam1/SnapLink-Client.git",
+	},
+	{
+		id: 4,
+		title: "Pomodoro App",
+		description:
+			"Aplicación diseñada para gestionar y organizar eficientemente el tiempo dedicado a cada tarea, ayudándote a optimizar tu productividad y mantener el control de tus actividades diarias.",
+		images: [pomodoro1, pomodoro2, pomodoro3],
+		state: "finalizado",
+		github: "https://github.com/JuanCam1/appPomodoroReactNative.git",
+	},
+	{
+		id: 5,
+		title: "Search User Github",
+		description:
+			"Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",
+		images: [search1, search2],
+		state: "finalizado",
+		github: "https://github.com/JuanCam1/SnapLink-Client.git",
+	},
 ];
