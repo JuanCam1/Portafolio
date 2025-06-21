@@ -30,6 +30,10 @@ import imagesManager6 from "@/assets/images/manager-images/manager-images6.webp"
 import search1 from "@/assets/images/searchUserGithub/search1.webp";
 import search2 from "@/assets/images/searchUserGithub/search2.webp";
 
+//SearchUserGithubClient
+import searchClient1 from "@/assets/images/usergithub-client/github-client1.webp";
+import searchClient2 from "@/assets/images/usergithub-client/github-client2.webp";
+
 export interface IProject {
 	id: number;
 	title: string;
@@ -75,6 +79,18 @@ export const dataProjects: IProject[] = [
 	},
 	{
 		id: 3,
+		title: "Search User Github",
+		description:
+			"Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",
+		images: [
+			searchClient1,
+			searchClient2,
+		],
+		state: "finalizado",
+		github: "https://github.com/JuanCam1/File-Manager-Images.git",
+	},
+	{
+		id: 4,
 		title: "SnapLink",
 		description:
 			"Acortador de enlaces: transforma y comparte tus enlaces de forma rápida, sencilla y eficiente, facilitando su uso y difusión en cualquier plataforma.",
@@ -83,7 +99,7 @@ export const dataProjects: IProject[] = [
 		github: "https://github.com/JuanCam1/SnapLink-Client.git",
 	},
 	{
-		id: 4,
+		id: 5,
 		title: "Pomodoro App",
 		description:
 			"Aplicación diseñada para gestionar y organizar eficientemente el tiempo dedicado a cada tarea, ayudándote a optimizar tu productividad y mantener el control de tus actividades diarias.",
@@ -92,7 +108,7 @@ export const dataProjects: IProject[] = [
 		github: "https://github.com/JuanCam1/appPomodoroReactNative.git",
 	},
 	{
-		id: 5,
+		id: 6,
 		title: "Search User Github",
 		description:
 			"Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",

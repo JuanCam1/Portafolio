@@ -22,6 +22,7 @@ const Projects = () => {
 	const project3 = dataProjects[2];
 	const project4 = dataProjects[3];
 	const project5 = dataProjects[4];
+	const project6 = dataProjects[5];
 	return (
 		<>
 			<Project
@@ -131,7 +132,7 @@ const Projects = () => {
 								<TailwindLogo />
 							</div>
 							<div className="h-7 iconsLinks">
-								<FirebaseLogo />
+								<ShadcnLogo />
 							</div>
 						</ContainerFlex>
 					</div>
@@ -165,7 +166,7 @@ const Projects = () => {
 								<TailwindLogo />
 							</div>
 							<div className="h-7 iconsLinks">
-								<ExpoLogo />
+								<FirebaseLogo />
 							</div>
 						</ContainerFlex>
 					</div>
@@ -205,6 +206,40 @@ const Projects = () => {
 					</div>
 					<div className="justify-center items-center w-full h-[300px]">
 						<CarouselItems items={project5.images} />
+					</div>
+				</div>
+			</Project>
+
+			<Project
+				state={project6.state}
+				github={project6.github}
+				url={project6.url}
+			>
+				<div className="max-sm:px-0 py-2 w-full">
+					<div className="mb-4 w-full">
+						<TypographyH2
+							text={project6.title}
+							className="pb-2 font-extrabold text-blue-400 text-2xl"
+						/>
+
+						<TypographyP className="leading-6">
+							{project6.description}
+						</TypographyP>
+
+						<ContainerFlex className="justify-start mt-4 w-full h-8">
+							<div className="h-7 iconsLinks">
+								<ReactLogo />
+							</div>
+							<div className="h-7 iconsLinks">
+								<TailwindLogo />
+							</div>
+							<div className="h-7 iconsLinks">
+								<ExpoLogo />
+							</div>
+						</ContainerFlex>
+					</div>
+					<div className="justify-center items-center w-full h-[300px]">
+						<CarouselItems items={project6.images} />
 					</div>
 				</div>
 			</Project>
