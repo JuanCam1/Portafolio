@@ -9,32 +9,31 @@ import "./index.css";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
 
 const router = createHashRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        path: "/",
-        element: <Projects />,
-      },
-      {
-        path: "experience",
-        element: <ExperienceList />,
-      },
-      {
-        path: "blogs",
-        element: <Blogs />,
-      },
-    ],
-  },
+	{
+		path: "/",
+		element: <App />,
+		children: [
+			{
+				index: true,
+				path: "/",
+				element: <Projects />,
+			},
+			{
+				path: "experience",
+				element: <ExperienceList />,
+			},
+			{
+				path: "blogs",
+				element: <Blogs />,
+			},
+		],
+	},
 ]);
 
 const idRoot = document.getElementById("root") as HTMLElement;
 const root = createRoot(idRoot);
 root.render(
-  <ThemeProvider>
-    <RouterProvider router={router} />
-  </ThemeProvider>
-
+	<ThemeProvider>
+		<RouterProvider router={router} />
+	</ThemeProvider>,
 );

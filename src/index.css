@@ -1,13 +1,13 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
 }
 
 /*
@@ -19,45 +19,44 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @layer utilities {
-  html {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+	html {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
 
-  body {
-    padding: 0;
-    margin: 0;
-    transition:
-      background-color 0.5s,
-      color 0.5s;
-    font-family: 'Roboto', sans-serif;
-  }
+	body {
+		padding: 0;
+		margin: 0;
+		transition:
+			background-color 0.5s,
+			color 0.5s;
+		font-family: "Roboto", sans-serif;
+	}
 }
 
-
 @layer base {
-  :root {
-    --radius: 0.5rem
-  }
+	:root {
+		--radius: 0.5rem;
+	}
 }
 
 .iconsLinks {
-  @apply flex justify-center items-center rounded-sm transform transition hover:-translate-y-1 cursor-pointer size-10;
+	@apply flex justify-center items-center rounded-sm transform transition hover:-translate-y-1 cursor-pointer size-10;
 }

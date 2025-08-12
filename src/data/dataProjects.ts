@@ -82,10 +82,7 @@ export const dataProjects: IProject[] = [
 		title: "Search User Github",
 		description:
 			"Aplicación para la busqueda de la información de la cuenta de github con el nombre de usuario.",
-		images: [
-			searchClient1,
-			searchClient2,
-		],
+		images: [searchClient1, searchClient2],
 		state: "finalizado",
 		github: "https://github.com/JuanCam1/File-Manager-Images.git",
 	},

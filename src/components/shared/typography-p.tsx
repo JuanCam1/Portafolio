@@ -2,9 +2,9 @@ import type { FC, PropsWithChildren, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface Props extends PropsWithChildren {
-  className?: ReactNode;
+	className?: ReactNode;
 }
 const TypographyP: FC<Props> = ({ className, children }) => {
-  return <p className={cn("leading-7 mt-0 ", className)}>{children}</p>;
+	return <p className={cn("leading-7 mt-0 ", className)}>{children}</p>;
 };
 export default TypographyP;
