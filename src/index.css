@@ -1,24 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-html {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  transition: background-color 0.5s, color 0.5s;
-  font-family: "Roboto", sans-serif;
+@layer utilities {
+  html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    transition:
+      background-color 0.5s,
+      color 0.5s;
+    font-family: 'Roboto', sans-serif;
+  }
 }
 
 

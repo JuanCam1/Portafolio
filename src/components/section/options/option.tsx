@@ -7,7 +7,7 @@ interface OptionProps {
 }
 const Option = ({ pathname, path, text }: OptionProps) => {
   return (
-    <li className="flex-1 hover:bg-gray-900/10 hover:dark:bg-gray-700/70 cursor-pointer">
+    <li className="flex-1 hover:bg-gray-900/10 dark:hover:bg-gray-700/70 cursor-pointer">
       <Link
         to={path}
         aria-current="page"

@@ -11,7 +11,7 @@ const App = () => {
 					<div className="top-2 right-5 fixed">
 						<ModeToggle />
 					</div>
-					<div className="w-[100%] h-full">
+					<div className="w-full h-full">
 						<Content />
 					</div>
 				</div>

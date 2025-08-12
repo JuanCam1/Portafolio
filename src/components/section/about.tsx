@@ -46,7 +46,7 @@ export const About = () => {
           target="_blank"
           rel="noreferrer"
           download="CV Juan Camilo Rojas Diaz.pdf"
-          className="flex justify-center items-center gap-2 border-[0.5px] dark:border-zinc-800 bg-white hover:dark:bg-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 ml-2 px-2 py-1 border-blue-500 rounded-md text-black dark:text-white transform transition duration-300 ease-in-out group hover:scale-105"
+          className="flex justify-center items-center gap-2 border-[0.5px] dark:border-zinc-800 bg-white dark:hover:bg-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 ml-2 px-2 py-1 border-blue-500 rounded-md text-black dark:text-white transform transition duration-300 ease-in-out group hover:scale-105"
         >
           <span className="font-semibold text-blue-600 text-sm">CV</span>
           <Download className="h-5 text-blue-600 transform transition-transform group-hover:translate-x-1 duration-300 ease-in-out" />
