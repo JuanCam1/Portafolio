@@ -6,39 +6,33 @@ import TypographyP from "../shared/typography-p";
 import ContainerFlex from "../shared/container-flex";
 import { dataUrl } from "../../data/dataUrl";
 import LinkedInLogo from "../icons/linkedin-logo";
-import { Download } from 'lucide-react';
-import documentPdf from "@/assets/documents/CV Juan Camilo Rojas Diaz.pdf"
+import { Download } from "lucide-react";
+import documentPdf from "@/assets/documents/CV Juan Camilo Rojas Diaz.pdf";
 
 export const About = () => {
   return (
     <article className="flex flex-col gap-2">
-      <TypographyH1 className="text-blue-500 text-center tracking-tight" text="Juan Camilo Rojas" />
+      <TypographyH1
+        className="text-blue-500 text-center tracking-tight"
+        text="Juan Camilo Rojas"
+      />
 
-      <TypographyH2 className="text-blue-300 text-center" text="⭐ ¡Desarrollador Fronted! ⭐" />
+      <TypographyH2
+        className="text-neutral-400 text-center"
+        text=" ¡Desarrollador Fronted! "
+      />
 
-      <TypographyP className="mt-6 text-balance text-center">
-        Me destaco por mi habilidad para adaptarme rápidamente a nuevos entornos
-        y desafíos. Soy un aprendiz ágil y los retos no me intimidan, sino que
-        los considero oportunidades para crecer. Mi naturaleza proactiva y
-        creativa me impulsa a buscar soluciones innovadoras en equipo,
-        aprovechando mis habilidades de comunicación y colaboración.
-        Constantemente me mantengo al tanto de las últimas tecnologías y estoy
-        siempre receptivo a aprender de los demás.😁
+      <TypographyP className="mt-6 text-balance text-center text-base">
+        Me adapto rápidamente a nuevos entornos y desafíos, buscando soluciones
+        innovadoras en equipo. Soy proactivo, creativo y mantengo un aprendizaje
+        constante de las últimas tecnologías.
       </TypographyP>
 
       <ContainerFlex>
-        <Link
-          to={dataUrl.github}
-          target="_blank"
-          className="iconsLinks"
-        >
+        <Link to={dataUrl.github} target="_blank" className="iconsLinks">
           <GithubLogo className="size-7" />
         </Link>
-        <Link
-          to={dataUrl.linkedin}
-          target="_blank"
-          className="iconsLinks"
-        >
+        <Link to={dataUrl.linkedin} target="_blank" className="iconsLinks">
           <LinkedInLogo className="size-7" />
         </Link>
         <a

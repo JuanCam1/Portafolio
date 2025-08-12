@@ -11,9 +11,12 @@ const Option = ({ pathname, path, text }: OptionProps) => {
       <Link
         to={path}
         aria-current="page"
-        className={` ${pathname === `${path}` &&
-          "active text-black dark:text-white border-b-4 border-solid border-blue-300"
-          } inline-block p-4  rounded-t-lg  `}
+        className={` 
+           inline-block p-4 rounded-t-lg  text-base
+          ${
+            pathname === `${path}` &&
+            "active text-black dark:text-white border-b-2 border-solid border-blue-300"
+          }`}
       >
         {text}
       </Link>
